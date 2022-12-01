@@ -2,9 +2,11 @@ DEMO = False
 
 data = open("input-demo.txt" if DEMO else "input.txt").readlines()
 data = list(map(lambda x: x.strip(), data))
+data.append("")
 
 currentMax = 0
 currentAccumulator = 0
+
 for line in data:
     try:
         number = int(line)

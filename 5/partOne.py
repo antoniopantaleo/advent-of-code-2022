@@ -32,7 +32,7 @@ def make_move(instruction):
         block = stacks[_from].pop(0)
         stacks[to].insert(0, block)
 
-for idx, instruction in enumerate(data[1].split("\n")):
+for instruction in enumerate(data[1].split("\n")):
     make_move(instruction)
 
 print("".join([stack[0] for stack in stacks]))
